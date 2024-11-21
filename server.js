@@ -14,7 +14,7 @@ db.once('open', ()=> {
 })
 
 const userSchema = new mongoose.Schema({
-    regd_no:String,
+    mob_no:String,
     name:String,
     email:String,
     branch:String
@@ -27,9 +27,9 @@ app.get('/', (req, res)=> {
 })
 
 app.post('/post', async(req, res)=> {
-    const {regd_no, name, email, branch} = req.body
+    const {mob_no, name, email, branch} = req.body
     const user = new Users ({
-        regd_no,
+        mob_no,
         name,
         email,
         branch
